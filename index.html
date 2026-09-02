@@ -1,64 +1,117 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
- <head>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog</title>
- </head>
- <style>
-   header{
-         background-color: #CFF3FF ;
-        color: #000000;
-        max-width: 800px;
-        margin: 0 auto;
-   }
-    main{
-      color: #000000;
-        background-color: #CFF3FF;
-        max-width: 800px;
-        margin: 0 auto;
-        display: flex;
-    }
-    img{
-      width: 80px;
-      height: 80px;
-    }
-     .artigo-autor {
-      font-weight: bold;
-
-    }
- </style>
+  <title>Mundo Frutiger Aero</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-    <header> <div></div>
- <h1>Meu blog</h1>
-   <p>blog que recria a estetica frutiger aero</p>
-    </header>
-  
-<main>
-  <img src="user.jpeg" alt="user">
-<div>
-<h2>Meu primeiro post</h2>
-    <p class="artigo-autor  ">Por:desconhecido></p>
-    <p> Vou falar sobre curiosidades sobre a estetica frutiger aero
-        e como essa estetica que as pessoas dos anos 2000
-        pensavam que era o futuro não se tornou real
+  <header>
+    <div class="header-content">
+      <h1>Mundo Frutiger Aero</h1>
+      <button id="theme-toggle" class="btn-theme">🌙 Modo Escuro</button>
+    </div>
+    <p>Explorando a estética futurista e nostálgica dos anos 2000.</p>
+  </header>
+
+  <main>
+    <article class="post">
+      <div class="post-header">
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150" alt="Foto de perfil do autor" class="avatar">
+        <div>
+          <h2>O que foi o Frutiger Aero?</h2>
+          <p class="artigo-autor">Por: Desconhecido</p>
+        </div>
+      </div>
+
+      <p>
+        O <strong>Frutiger Aero</strong> foi um estilo visual e de design de interface que dominou a cultura pop de aproximadamente 2004 a 2013. 
+        Ele sucedeu a estética Y2K e se destacou por transmitir uma sensação de frescor, tecnologia limpa e um otimismo brilhante com o avanço da internet.
       </p>
-      <button>⭐ <span>0</span>​</button>
-</div>
 
-</main>
+      <button id="like-btn" class="btn-like">⭐ <span>0</span></button>
+    </article>
 
+    <section class="card">
+      <h2>A Origem do Nome</h2>
+      <p>
+        O termo "Frutiger Aero" foi cunhado em 2017 por Sofi Lee no site <em>Consumer Aesthetics Research Institute</em>. 
+        A combinação une dois elementos marcantes da época:
+      </p>
+      <ul class="feature-list">
+        <li><strong>Frutiger:</strong> Referência à família tipográfica <em>Frutiger</em>, muito utilizada em sinalizações, interfaces e marcas da década de 2000.</li>
+        <li><strong>Aero:</strong> Referência à linguagem visual <em>Windows Aero</em>, introduzida no Windows Vista e consolidada no Windows 7, famosa pelas bordas de vidro translúcido e animações leves.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Galeria de Exemplos Visuais</h2>
+      <div class="gallery-grid">
+        
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600" alt="Ecosistema futurista digital e globo">
+          <div class="gallery-info">
+            <h3>Eco-Futurismo</h3>
+            <p>O conceito de tecnologia invisível integrada à natureza, com globos terrestres reluzentes e paisagens limpas.</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=600" alt="Textura de vidro e luz em estilo MSN">
+          <div class="gallery-info">
+            <h3>Design Glossy & Skeuomorfismo</h3>
+            <p>Texturas reflexivas de plástico e vidro, lembrando ícones como os do MSN Messenger, Skype e Windows Media Player.</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600" alt="Vida aquática com peixes e bolhas">
+          <div class="gallery-info">
+            <h3>Vida Aquática & Peixes</h3>
+            <p>A presença constante de peixes, golfinhos e bolhas de água, evocando protetores de tela clássicos e a estética marítima.</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600" alt="Gatinho em ambiente azul luminoso">
+          <div class="gallery-info">
+            <h3>Céus Azulados & Efeitos de Água</h3>
+            <p>Fotografia de alta definição combinada a respingos d'água virtuais e céus ensolarados sem nuvens pesadas.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Pilares da Estética</h2>
+      <ul class="feature-list">
+        <li><strong>Skeuomorfismo:</strong> Interfaces projetadas para imitarem materiais físicos como vidro, borracha e metal polido.</li>
+        <li><strong>Luminosidade (Glossy):</strong> Botões e superfícies com gradientes que simulam iluminação superior e brilho interno.</li>
+        <li><strong>Humanismo Tecnológico:</strong> Tecnologia representada não como algo frio ou distópico, mas como uma ferramenta verde, amigável e revigorante.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+    const likeBtn = document.querySelector("#like-btn");
+    const themeToggle = document.querySelector("#theme-toggle");
+
+    likeBtn.addEventListener("click", function() {
+      let texto = likeBtn.querySelector("span");
+      texto.textContent++;
+    });
+
+    themeToggle.addEventListener("click", function() {
+      document.body.classList.toggle("dark-mode");
+      
+      if (document.body.classList.contains("dark-mode")) {
+        themeToggle.textContent = "☀️ Modo Claro";
+      } else {
+        themeToggle.textContent = "🌙 Modo Escuro";
+      }
+    });
+  </script>
 </body>
-<script>
-    const botao = ducument.querSelector("button")
-    botao.addEventstener("click", botaoClicado)
-
-  function botaoClicado(){
-     console.log("fui clicado")
-     let texto = botao.querSelector("span")
-     texto.textContent++;
-  }
-
-</script>
 </html>
